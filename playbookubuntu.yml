@@ -18,6 +18,11 @@
     - name: Install Forever (to run our Node.js app).
       npm: name=forever global=yes state=present
 
+    - name: create directory for nodejs scripts
+      file:
+        path: {{ node_apps_location }}
+        state: directory   
+
     - name: Ensure Node.js app folder exists.
       file: "path={{ node_apps_location }} state=directory"
 
