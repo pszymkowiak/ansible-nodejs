@@ -20,7 +20,7 @@
 
     - name: create directory for nodejs scripts
       file:
-        path: {{ node_apps_location }}
+        path: "{{ node_apps_location }}"
         state: directory   
 
     - name: Ensure Node.js app folder exists.
